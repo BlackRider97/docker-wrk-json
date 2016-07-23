@@ -1,5 +1,4 @@
 FROM debian:jessie
-MAINTAINER Michał Czeraszkiewicz <czerasz.hosting@gmail.com>
 
 # Set the reset cache variable
 ENV REFRESHED_AT 2015-06-15
@@ -19,8 +18,8 @@ RUN apt-get install -y git make build-essential libssl-dev
 # Resource: https://github.com/wg/wrk/wiki/Installing-Wrk-on-Linux
 WORKDIR /tmp
 
-RUN git clone https://github.com/wg/wrk.git &&\
-    cd wrk &&\
+RUN git clone https://github.com/giltene/wrk2.git &&\
+    cd wrk2 &&\
     make &&\
     mv wrk /usr/local/bin
 
